@@ -1,0 +1,124 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+/* App Container */
+.container {
+  background: #1e1e1e;
+  padding: 30px 35px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 450px;
+}
+
+/* Fancy Heading */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+  background: linear-gradient(120deg, #00c9ff, #92fe9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Input + Button Row */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input Styling */
+#todo-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+#todo-input::placeholder {
+  color: #aaa;
+}
+
+/* Add Button */
+#add-btn {
+  padding: 12px 18px;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#add-btn:hover {
+  background-color: #45a049;
+}
+
+/* Task List */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Task Item */
+#todo-list li {
+  background: #2c2c2c;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-left: 4px solid #4caf50;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+/* Hover effect */
+#todo-list li:hover {
+  background-color: #383838;
+}
+
+/* Completed Task */
+.completed {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.7;
+}
+
+/* Delete Button */
+#todo-list li button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #ff6b6b;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#todo-list li button:hover {
+  transform: scale(1.2);
+}
